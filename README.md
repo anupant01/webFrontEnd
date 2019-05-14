@@ -1,10 +1,10 @@
-# Your Project Title
+# Craft Information
 
-Name: Your full name here
+Name: Anu Panta
 
-CollegeID: Your college ID
+CollegeID: 170007
 
-Batch: Jan19A/19B/19C/19D
+Batch: Jan19C
 
 
 # Frontend code architecture
