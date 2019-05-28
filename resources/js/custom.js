@@ -9,11 +9,10 @@ $(document).ready(
 
 				var regFormData ={
 
-				firstname: $('#firstname').val(),
-				lastname: $('#lastname').val(),
+				firstName: $('#firstName').val(),
+				lastName: $('#lastName').val(),
 				email: $('#email').val(),
 				address: $('#address').val(),
-				contactnumber: $('#contactnumber').val(),
 				username: $('#username').val(),
 				password: $('#password').val(),
 
@@ -25,19 +24,19 @@ $(document).ready(
 $.ajax({
 //v1:version, users:route in the backend
 //api name should be used in Noun
-url: 'http://localhost:8000/v1/users',
+url: 'http://localhost:9000/v1/users',
 method: 'POST',
 contentType: 'application/json',
 //javastring lai string ms change garcha
-data: JSON.stringfy(regFormData),
+data: JSON.stringify(regFormData),
 
 
 success: function(result,status){
-
+console.log(result)
 },
 
 error:function(jqXHR,status){
-
+console.log(status)
 }
 
 
