@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Craft Information</title>
-	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">
-  	<link rel="stylesheet" type="text/css" href="resources/css/custom.css">
+	<title>Login</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../resources/css/custom.css"> -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css"> 
+	  <link rel="stylesheet" type="text/css" href="../resources/css/util.css">
+	  <link rel="stylesheet" type="text/css" 
+	  href="../resources/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
 </head>
 <body>
 
 
+	<div class="limiter p-t-100 p-b-100">
+     <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                  <div class="card-body">
+                    <h2 class="title">Login Form</h2> 
 
+                    <form method="POST">
+
+                        <div class="input-group">
+                           <span class="input-icon" ><i class="zmdi zmdi-account"></i></span> 
+                            <input class="input100" type="text" placeholder="Username" name="username">
+                        </div>
+
+                        <div class="input-group">
+                                <span class="input-icon" ><i class="zmdi zmdi-lock"></i></span>
+                                <input class="input100" type="password" placeholder="Password" name="password">
+                              
+                        </div>
+
+
+
+
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                            <span class="text-center p-l-170">
+                                    <a class="txt2" href="register.html">
+                                        Create your Account
+                                        <i class="zmdi zmdi-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </span> 
+
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
 
 </body>
 
-<script type="text/javascript" src="resources/js/jquery-3.3.0.min.js"></script>
-<script type="text/javascript" src="resources/js/custom.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-3.3.0.min.js"></script>
+<script type="text/javascript" src="../resources/js/custom.js"></script>
+<!-- <script src="../resources/js/popper.js"></script> -->
 
 
-<script type="text/javascript" src="resources/js/bootstrap.js"></script>
+<!-- <script type="text/javascript" src="../resources/js/bootstrap.js"></script> -->
 </html>
-
-
 
 
 
