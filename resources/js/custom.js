@@ -15,7 +15,6 @@ $(document).ready(
 				address: $('#address').val(),
 				username: $('#username').val(),
 				password: $('#password').val(),
-
 			}
 
 			
