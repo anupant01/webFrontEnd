@@ -15,18 +15,27 @@
             <div class="card card-1">
                 <div class="card-heading"></div>
                   <div class="card-body">
+
+ <!-- display success message and error in frontend  -->
+ <div>
+      <p id="message">
+
+      </p>
+    
+    </div>
+
                     <h2 class="title">Login Form</h2> 
 
-                    <form method="POST">
+                    <form id="loginForm"  method= "POST"  enctype="multipart/form-data">
 
                         <div class="input-group">
                            <span class="input-icon" ><i class="zmdi zmdi-account"></i></span> 
-                            <input class="input100" type="text" placeholder="Username" name="username">
+                            <input class="input100" type="text" placeholder="Username" id="username" name="username" required>
                         </div>
 
                         <div class="input-group">
                                 <span class="input-icon" ><i class="zmdi zmdi-lock"></i></span>
-                                <input class="input100" type="password" placeholder="Password" name="password">
+                                <input class="input100" type="password" placeholder="Password" id="password" name="password" required>
                               
                         </div>
 
