@@ -1,13 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
    <head>
       <title>Craft Info</title>
-      <!--meta tags -->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="../../resources/css/bootstrap.css" rel="stylesheet" type="text/css" >
-      <link href="../../resources/fonts/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" >
+      <!-- <link href="../../resources/fonts/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" > -->
       <link rel="stylesheet" href="../../resources/css/shop.css" type="text/css" />
       <link href="../../resources/css/style.css" rel='stylesheet' type='text/css'>
    </head>
@@ -26,27 +23,7 @@
                      <button class="btn" type="submit">Search</button>
                   </form>
                </div>
-               <div class="col-lg-4 col-md-3 right-side-cart">
-                  <div class="cart-icons">
-                     <ul>
-                         <li>
-                              <button type="button"><a href="about.html"><span class="far fa-user"></span></a></button>
-                           </li>
-                           <li>
-                              <button type="button" data-toggle="modal" data-target="#exampleModal"> <span class="far fa-user"></span></button>
-                           </li>
-                        <li class="toyscart toyscart2 cart cart box_1">
-                           <form action="#" method="post" class="last">
-                              <input type="hidden" name="cmd" value="_cart">
-                              <input type="hidden" name="display" value="1">
-                              <button class="top_toys_cart" type="submit" name="submit" value="">
-                              <span class="fas fa-cart-arrow-down"></span>
-                              </button>
-                           </form>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+             
             </div>
          </div>
          <nav class="navbar navbar-expand-lg navbar-light">
@@ -140,19 +117,16 @@
          <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
             <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Contact US</h3>
               <div class="contact-list-grid">
-               <form action="#" method="post">
+               <form  id="feedbackForm" method="POST" enctype="multipart/form-data">
                   <div class=" agile-wls-contact-mid">
                      <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" placeholder="Name" id="fname">
                      </div>
                      <div class="form-group contact-forms">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" placeholder="Email" id="email">
                      </div>
                      <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Phone">
-                     </div>
-                     <div class="form-group contact-forms">
-                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Message" id="feedback"></textarea>
                      </div>
                      <button type="submit" class="btn btn-block sent-butnn">Send</button>
                   </div>
@@ -168,10 +142,10 @@
             <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Get In Touch Us</h3>
             <div class="icons mt-4 text-center">
                <ul>
-                  <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                  <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                  <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                  <li><a href="#"><span class="fab fa-vk"></span></a></li>
+                  <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                  <li><a href="#"><span class="fa fa-envelope"></span></a></li>
+                  <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                  <li><a href="#"><span class="fa fa-vk"></span></a></li>
                </ul>
                <p class="my-3">velit sagittis vehicula. Duis posuere 
                   ex in mollis iaculis. Suspendisse tincidunt
@@ -241,6 +215,7 @@
       <!--js working-->
       <script src='../../resources/js/jquery-3.4.1.min.js'></script>
       <script src="../../resources/js/bootstrap.js"></script>
+      <script src="../../resources/js/feedback.js"></script>
       <script src="../../resources/js/logout.js"></script>
      
    </body>
