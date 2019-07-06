@@ -75,22 +75,22 @@ $(document).ready(
 				success: function (result, status) {
 
 					window.localStorage.setItem('token', result.token);
-					window.localStorage.setItem('id', result.id);
-					window.localStorage.setItem('username', result.username);
+					window.localStorage.setItem('id', result.result.id);
+					window.localStorage.setItem('username', result.result.username);
 
 
-					// console.log(result.result.usertype)
+					console.log(result.result.usertype)
 					if (result.result.usertype == "User") {
-						window.location.href = 'index.html'
+						window.location.href = 'user/index.html'
 
 					}
 					else {
-						window.location.href = 'adminDashboard.html'
+						window.location.href = 'admin/adminDashboard.html'
 						// 		console.log('admin');
-
-
-
 					}
+
+
+
 				},
 
 				error: function (jqXHR, status) {
@@ -101,5 +101,6 @@ $(document).ready(
 		})
 
 
+	
 
 	})
