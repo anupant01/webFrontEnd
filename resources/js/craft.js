@@ -198,6 +198,6 @@ $(document).ready(function () {
 
 function TokenNotFound(token){
     if(!token){
-        window.location.href="index.html";	
+        window.location.href="../index.html";	
     }
 }
