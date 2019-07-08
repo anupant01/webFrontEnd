@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-   
-
     $.ajax({
 
         url:'http://localhost:7000/v1/craftView',
@@ -15,7 +13,7 @@ $(document).ready(function () {
 
                 $('#craftDetails').append('    <li>\n' +
                     '<figure style="border: 1px solid black">\n' +
-                    ' <img src="http://localhost:7000/images/craft/'+result[key].craftimage+'"+ alt="img" height="400px" width="500px">\n' +
+                    ' <img src="http://localhost:7000/images/craft/'+result[key].craftimage+'"+ alt="img" height="100px" width="100px">\n' +
                     '\n' +
                     '<figcaption>\n' +
                     '<h4>'+ result[key].craftName +'</h4>\n' +

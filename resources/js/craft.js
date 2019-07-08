@@ -97,7 +97,7 @@ $(document).ready(function () {
         console.log($(this)[0].attributes.uid.nodeValue);
         uid = $(this)[0].attributes.uid.nodeValue;
 
-        var isDelete = confirm ("Are you sure?");
+        var isDelete = confirm ("Are you sure you want to delete?");
 
         if (isDelete == true){
 

@@ -7,7 +7,7 @@ $(document).ready(
 			event.preventDefault();
 			console.log('register button clicked');
 
-			var formdata = new FormData();
+			// var formdata = new FormData();
 			var registrationData = {
 
 				firstName: $('#firstName').val(),
@@ -16,26 +16,24 @@ $(document).ready(
 				address: $('#address').val(),
 				username: $('#username').val(),
 				password: $('#password').val(),
-				images: $('#images')[0].files[0],
 				usertype: 'User'
 
 			}
 
 			console.log(registrationData);
-			// images: $('#images')[0].files[0]
+	
 
-			for (key in registrationData) {
-				// console.log(registrationData[key]);	
-				formdata.append(key, registrationData[key]);
-			}
+			// for (key in registrationData) {
+			// 	// console.log(registrationData[key]);	
+			// 	formdata.append(key, registrationData[key]);
+			// }
 
 
 			$.ajax({
 				url: 'http://localhost:7000/v1/register',
 				method: 'POST',
-				processData: false,
-				contentType: false,
-				data: formdata,
+				contentType:'application/json',
+				data: JSON.stringify(registrationData),
 				dataType: 'json',
 	
 				success: function (result, status) {
@@ -43,10 +41,13 @@ $(document).ready(
 					console.log(result);
 					console.log(status);
 					console.log('asdasdasd');
+					$("#message").html(result.message);
+					window.location.href = 'login.html'
 				},
 				error: function (jqXHR, status) {
 					console.log(jqXHR)
 					console.log('qwert')
+					window.location.href = 'register.html'
 	
 				}
 			});
@@ -81,16 +82,17 @@ $(document).ready(
 					window.localStorage.setItem('lastName', result.result.lastName);
 					window.localStorage.setItem('email', result.result.email);
 					window.localStorage.setItem('address', result.result.address);
+					window.localStorage.setItem('usertype', result.result.usertype);
 
 
-
+					$("#message").html(result.message);
 					console.log(result.result.usertype)
 					if (result.result.usertype == "User") {
 						window.location.href = 'user/index.html'
 
 					}
 					else {
-						window.location.href = 'admin/adminDashboard.html'
+						window.location.href = 'admin/tables.html'
 						// 		console.log('admin');
 					}
 
@@ -100,7 +102,7 @@ $(document).ready(
 
 				error: function (jqXHR, status) {
 					console.log(jqXHR);
-					//$("#message").html(jqXHR.responseJSON.message);
+					$("#message").html(jqXHR.responseJSON.message);
 				}
 			})
 		})

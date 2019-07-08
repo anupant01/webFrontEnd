@@ -61,7 +61,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="craft.html">
+            <a class="nav-link " href="craftAdd.html">
               <i class="fa fa-list"></i> Add craft
             </a>
           </li>
@@ -95,11 +95,11 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="tables.html">Tables</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="craft.html">Craft Add</a>
       </div>
     </nav>
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8">
+    <div class="header bg-gradient-primary pb-8  ">
       <div class="container-fluid">
         <div class="header-body">
 
@@ -108,77 +108,65 @@
       </div>
     </div>
     <!-- Page content -->
-    <div class="container-fluid mt--7">
+    <div class="container-fluid">
       <!-- Dark table -->
       <div class="row mt-5">
         <div class="col">
-          <div class="card bg-default shadow">
-            <div class="card-header bg-transparent border-0">
-              <h3 class="text-white mb-0">Caft tables</h3>
-            </div>
-            <div class="table-responsive">
-              <table class="table align-items-center table-dark table-flush">
-                <thead class="thead-dark">
-                  <tr>
-                      <th scope="col">ID</th>
-                    <th scope="col">Craft Name</th>
-                    <th scope="col">craft Description</th>
-                    <th scope="col">origination</th>
-                    <th scope="col">type</th>
-                    <th scope="col">product</th>
-                    <th scope="col">price</th>
-                    <th scope="col">Images</th>
-                    <th scope="col">Edit craft</th>
-                    <th scope="col">Delete</th>
-                  </tr>
-                </thead>
-                <tbody id="craftList">
-                  <tr>
-                    <!-- Modal start-->
-                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
-                      aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Craft</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="card-body">
-                              <form method="post" id="updateCraft" class="add-new-post">
-                                Craft Name:<input class="form-control form-control-lg mb-3" id="craftName" type="text"
-                                  placeholder="Craft Name">
-                                  Craft Description: <input class="form-control form-control-lg mb-3" id="craftDesc" type="text"
-                                  placeholder="Craft Description">
-                                  Craft origination:<input class="form-control form-control-lg mb-3" type="text"
-                                  id="craftOrigin" placeholder="Craft origination">
-                                  Craft Type:<input class="form-control form-control-lg mb-3" type="text"
-                                  id="craftType" placeholder="Craft Type">
-                                  Craft product:<input class="form-control form-control-lg mb-3" type="text" id="craftproduct"
-                                  placeholder=" Craft product">
-                                  Craft price:<input class="form-control form-control-lg mb-3" type="text" id="craftprice"
-                                  placeholder="Craft price">
-                                <button class="btn btn-sm btn-outline-accent">
-                                  <i class="fa fa-save"></i> Update</button>
-                              </form>
-                            </div>
-                          </div>
-
-                        </div>
+          <div>
+                <div class="card-header bg-transparent border-0">
+                        <h1 style="text-align:center">Add Caft</h3>
                       </div>
-                    </div>
-                    <!-- Modal finish-->
-
-
-
-
-
-                  </tr>
-
-                </tbody>
-              </table>
+                <form id="craftForm" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                       
+                          <div class="form-group ">
+                             <input class="form-control" type="text" id="craftName" name="craftName"
+                             placeholder="Craft Name" required>
+                          </div>
+        
+                          <div class="form-group ">
+                             <input class="form-control" type="text" placeholder="Craft Description" id="craftDesc"
+                             name="craftDesc" required>
+                          </div>
+        
+                          <div class="form-group ">
+                             <input class="form-control" type="text" id="craftOrigin" name="craftOrigin"
+                             placeholder="Craft Origination" required>
+                          </div>
+        
+        
+                          <div class="form-group ">
+                             <select name="category" required id="craftType" class="form-control">
+                                <option value="type" disabled selected>----Craft Type---</option>
+                                <option value="textile">Textile</option>
+                                <option value="nonTextile">Non-Textile</option>
+                         
+                            </select>
+                          </div>
+        
+                          <div class="form-group ">
+                             <input class="form-control" type="text" id="craftproduct" name="craftproduct"
+                             placeholder="Craft product" required>
+                          </div>
+        
+                          <div class="form-group ">
+                             <input class="form-control" type="text" id="craftprice" name="craftprice"
+                             placeholder="Craft Price" required>
+                          </div>
+        
+                         
+        
+                          <div class="form-group ">
+                           
+                             <input  type="file" id="craftimage" name="craftimage" required>
+                          </div>
+        
+        
+                          <button type="submit" class="btn btn-success btn-block">Add</button>
+                       </div>
+                    </fieldset>
+        
+                    </form>
             </div>
           </div>
         </div>
@@ -189,7 +177,7 @@
   <!-- Core -->
   <script src="../../resources/js/jquery-3.4.1.min.js"></script>
   <script src="../../resources/js/bootstrap.js"></script>
-  <script src="../../resources/js/craft.js"></script>
+  <script src="../../resources/js/craftadmin.js"></script>
   <script type="text/javascript" src="../../resources/js/tokenVerify.js"></script>
   <script type="text/javascript" src="../../resources/js/logout.js"></script>
 </body>

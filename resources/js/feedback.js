@@ -17,7 +17,6 @@ $(document).ready(function () {
             url:'http://localhost:7000/v1/feedback',
             method:'POST',
             contentType:'application/json',
-          
             data: JSON.stringify(feedbackdata),
             dataType:'json',
 
@@ -84,7 +83,7 @@ $(document).ready(function () {
         uid = $(this)[0].attributes.uid.nodeValue;
 
 
-        var isDelete = confirm ("Are you sure?");
+        var isDelete = confirm ("Are you sure you want to delete?");
 
         if (isDelete == true){
 

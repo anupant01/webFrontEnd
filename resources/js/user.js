@@ -20,7 +20,6 @@ $(document).ready(function () {
                         <td>'+ result[key].email + '</td>\
                         <td>'+ result[key].address + '</td>\
                         <td>'+ result[key].username + '</td>\
-                      <td> <img src="http://localhost:7000/images/upload/' + result[key].images +'"+alt="img" height="100px" width="100px">\
                     <td><button type="button" class="btn btn-danger" uid='+ result[key].id + ' id="delete">Delete</button></td>\
                     </tr>')
             }
@@ -40,7 +39,7 @@ $(document).ready(function () {
         uid = $(this)[0].attributes.uid.nodeValue;
 
 
-        var isDelete = confirm ("Are you sure?");
+        var isDelete = confirm ("Are you sure you want to delete?");
 
         if (isDelete == true){
 
