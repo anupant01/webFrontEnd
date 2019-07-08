@@ -20,7 +20,7 @@ $(document).ready(function () {
                         <td>'+ result[key].email + '</td>\
                         <td>'+ result[key].address + '</td>\
                         <td>'+ result[key].username + '</td>\
-                      <td> <img src="file:///home/dell/web/t2-backend-api-anupant01/images/upload/' + result[key].images +'"+alt="img" height="100px" width="100px">\
+                      <td> <img src="http://localhost:7000/images/upload/' + result[key].images +'"+alt="img" height="100px" width="100px">\
                     <td><button type="button" class="btn btn-danger" uid='+ result[key].id + ' id="delete">Delete</button></td>\
                     </tr>')
             }
@@ -69,30 +69,7 @@ else{
 })
 
 
-    /*edit ---*/
-    $('#userList').on('click', '#edit', function () {
-        //this is the userid
-        uid = $(this)[0].attributes.uid.nodeValue;
-        console.log($(this)[0].attributes.uid.nodeValue);
-
-        $.ajax({
-
-            url: 'http://localhost:7000/v1/register/' + uid,
-            method: 'GET',
-            dataType: 'json',
-            success: function (result) {
-                console.log(result);
-                $('#firstName').val(result.firstName)
-                $('#lastName').val(result.lastName)
-                $('#email').val(result.email)
-                $('#address').val(result.address)
-
-            },
-            error: function () {
-
-            }
-        })
-    })
+    
 
 
 })

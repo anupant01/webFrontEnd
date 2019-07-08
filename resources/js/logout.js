@@ -1,15 +1,18 @@
-$(document).ready(function () {
 
 
-    $('#logout').click(function (event) {
-        event.preventDefault();
+
+    function logout (token,id,username,firstName,lastName,email,address) {
+       
 
         window.localStorage.removeItem('token')
         window.localStorage.removeItem('id')
         window.localStorage.removeItem('username')
-         window.location.href = "../index.html"
+        window.localStorage.removeItem('firstName');
+		window.localStorage.removeItem('lastName');
+		window.localStorage.removeItem('email');
+		window.localStorage.removeItem('address');
+         window.location.href = "../login.html"
 
          
 
-    })
-    })
+    }

@@ -79,6 +79,14 @@ ul {
     font-weight: 600;
     text-transform: capitalize;
 }
+
+.title1{
+    font-size: 44px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
 .clr {
     color: #fff;
 }

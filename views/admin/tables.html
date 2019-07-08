@@ -23,8 +23,8 @@
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="../index.html">
-        <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-      </a>
+        <h2>Craft Info</h2>
+       </a>
 
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -78,19 +78,13 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="book.html">
-              <i class="fa fa-list"></i>Book
-            </a>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link active" href="feedback.html">
               <i class="fa fa-list"></i>FeedBack
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="../index.html" id="logout">
+            <a class="nav-link active" onclick="logout('token','id','username','firstName','lastName','email','address');">
               <i class="fa fa-list"></i>Logout
             </a>
           </li>
@@ -201,7 +195,8 @@
   <script src="../../resources/js/jquery-3.4.1.min.js"></script>
   <script src="../../resources/js/bootstrap.js"></script>
   <script src="../../resources/js/craft.js"></script>
-  <script src="../../resources/js/logout.js"></script>
+  <script type="text/javascript" src="../../resources/js/tokenVerify.js"></script>
+  <script type="text/javascript" src="../../resources/js/logout.js"></script>
 </body>
 
 </html>

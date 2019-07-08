@@ -23,7 +23,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="../index.html">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+         <h2>Craft Info</h2>
         </a>
   
         <!-- Collapse -->
@@ -76,13 +76,7 @@
                 <i class="fa fa-list"></i>User
               </a>
             </li>
-  
-            <li class="nav-item">
-              <a class="nav-link active" href="user_tables.html">
-                <i class="fa fa-list"></i>Book
-              </a>
-            </li>
-  
+
             <li class="nav-item">
               <a class="nav-link active" href="feedback.html">
                 <i class="fa fa-list"></i>FeedBack
@@ -90,7 +84,7 @@
             </li>
   
             <li class="nav-item">
-              <a class="nav-link active" href="../index.html" id="logout">
+              <a class="nav-link active" onclick="logout('token','id','username','firstName','lastName','email','address');">
                 <i class="fa fa-list"></i>Logout
               </a>
             </li>
@@ -160,7 +154,8 @@
     <script src="../../resources/js/jquery-3.4.1.min.js"></script>
     <script src="../../resources/js/bootstrap.js"></script>
     <script src="../../resources/js/feedback.js"></script>
-    <script src="../../resources/js/logout.js"></script>
+    <script type="text/javascript" src="../../resources/js/tokenVerify.js"></script>
+    <script type="text/javascript" src="../../resources/js/logout.js"></script>
   </body>
 
 </html>

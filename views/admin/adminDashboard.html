@@ -46,13 +46,10 @@
                         <a href="user_tables.html" class="nav-link">User</a>
 					 </li>
 					 <li class="nav-item">
-                        <a href="book.html" class="nav-link">Book</a>
-					 </li>
-					 <li class="nav-item">
                         <a href="feedback.html" class="nav-link">FeedBack</a>
                      </li>
                      <li class="nav-item">
-                        <a href="../index.html" class="nav-link" id="logout">Logout</a>
+                        <a  class="nav-link" onclick="logout('token','id','username','firstName','lastName','email','address');" >Logout</a>
                      </li>    
                </div>
             </nav>
@@ -268,7 +265,8 @@
  
       <script src='../../resources/js/jquery-3.4.1.min.js'></script>
 	  <script src="../../resources/js/bootstrap.js"></script>
-	  <script src="../../resources/js/logout.js"></script>
+	  <script type="text/javascript" src="../../resources/js/tokenVerify.js"></script>
+      <script type="text/javascript" src="../../resources/js/logout.js"></script>
      
    </body>
 </html>
