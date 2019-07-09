@@ -16,3 +16,5 @@ Provide a brief description of your front end code architecture including folder
   <li>for craft add by user: craft.js</li>
     <li>for craft add by admin: craftDetails.js</li>
 </ul> 
+
+design is done using bootstrap
