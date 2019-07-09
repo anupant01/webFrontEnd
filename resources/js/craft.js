@@ -12,7 +12,6 @@ $(document).ready(function () {
             craftName: $("#craftName").val(),
             description: $("#craftDesc").val(),
             origination: $("#craftOrigin").val(),
-            craftType: $("#craftType").val(),
             products: $("#craftproduct").val(),
             price: $("#craftprice").val(),
             craftimage: $('#craftimage')[0].files[0]
@@ -74,7 +73,6 @@ $(document).ready(function () {
                         <td>'+ result[key].craftName + '</td>\
                         <td>'+ result[key].description + '</td>\
                         <td>'+ result[key].origination + '</td>\
-                        <td>'+ result[key].craftType + '</td>\
                         <td>'+ result[key].products + '</td>\
                         <td>'+ result[key].price + '</td>\
                       <td> <img src="file:///home/dell/web/t2-backend-api-anupant01/images/craft/' + result[key].craftimage +'"+alt="img" height="100px" width="100px">\
@@ -145,7 +143,6 @@ $(document).ready(function () {
                 $('#craftName').val(result.craftName)
                 $('#craftDesc').val(result.description)
                 $('#craftOrigin').val(result.origination)
-                $('#craftType').val(result.craftType)
                 $('#craftproduct').val(result.products)
                 $('#craftprice').val(result.price)
 
@@ -168,7 +165,6 @@ $(document).ready(function () {
             craftName: $("#craftName").val(),
             description: $("#craftDesc").val(),
             origination: $("#craftOrigin").val(),
-            craftType: $("#craftType").val(),
             products: $("#craftproduct").val(),
             price: $("#craftprice").val()
         }
