@@ -1524,6 +1524,7 @@ h3.typo-main-heading {
 {
   
         width: 50%;
+       margin-left: 25%;
       
        
 }
@@ -1531,9 +1532,10 @@ h3.typo-main-heading {
 .cont1
 {
   
-        width: 60%;
+        width: 70%;
         border: 1px solid black;
        margin: 3%;
+       box-shadow: black 4px 4px 4px;
 
 }
 

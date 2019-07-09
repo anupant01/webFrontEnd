@@ -23,14 +23,13 @@ $(document).ready(function () {
 
             success: function(result,status) {
 
-                // $('#message-feedback').html(result.message)
                 console.log(result);
-
+                $("#messageFeedback").html(result.message);
                 //next();
             },
 
             error:function(jqXHR,status) {
-                // $('#message-feedback').html(jqXHR.responseJSON.message)
+                $('#messageFeedback').html(jqXHR.responseJSON.message)
                 console.log(jqXHR)
             }
         })
@@ -94,7 +93,8 @@ $(document).ready(function () {
             success: function (result, status) {
                 window.location.href = "feedback.html"
                 console.log(result.message)
-                $("#message").html(result.message);
+                
+                
 
             },
             error: function () {
