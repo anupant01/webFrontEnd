@@ -1520,3 +1520,29 @@ h3.typo-main-heading {
 }
 /*--//responsive--*/
 
+.cont
+{
+  
+        width: 50%;
+      
+       
+}
+
+.cont1
+{
+  
+        width: 60%;
+        border: 1px solid black;
+       margin: 3%;
+
+}
+
+.view1
+{
+	border:2px solid silver;
+	border-radius: 6px;
+	margin: 20px 80px; 
+	float:left;
+	box-shadow: black 4px 4px 4px;
+}
+

@@ -48,6 +48,7 @@ $(document).ready(
 					console.log(jqXHR)
 					console.log('qwert')
 					window.location.href = 'register.html'
+					$("#message").html(jqXHR.responseJSON.message);
 	
 				}
 			});
