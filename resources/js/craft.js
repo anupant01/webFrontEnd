@@ -39,17 +39,17 @@ $(document).ready(function () {
             processData: false,
             data: formData,
             success: function (result, status) {
-                // window.location.href= "dashboard.html"
+                window.location.href= "index.html"
                 console.log(result);
                 console.log(status);
-              
+                $("#message_craft").html(result.message);
                 
 
 
             },
             error: function (jqXHR) {
                 console.log(jqXHR);
-                // $("#message").html(jqXHR.responseText);
+                $("#message_craft").html(jqXHR.responseText);
 
             }
         })
@@ -198,6 +198,6 @@ $(document).ready(function () {
 
 function TokenNotFound(token){
     if(!token){
-        window.location.href="index.html";	
+        window.location.href="../login.html";	
     }
 }

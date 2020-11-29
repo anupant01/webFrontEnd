@@ -1,13 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
    <head>
       <title>Craft Info</title>
-      <!--meta tags -->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="../../resources/css/bootstrap.css" rel="stylesheet" type="text/css" >
-      <link href="../../resources/fonts/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" >
+      <!-- <link href="../../resources/fonts/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" > -->
       <link rel="stylesheet" href="../../resources/css/shop.css" type="text/css" />
       <link href="../../resources/css/style.css" rel='stylesheet' type='text/css'>
    </head>
@@ -26,27 +23,7 @@
                      <button class="btn" type="submit">Search</button>
                   </form>
                </div>
-               <div class="col-lg-4 col-md-3 right-side-cart">
-                  <div class="cart-icons">
-                     <ul>
-                         <li>
-                              <button type="button"><a href="about.html"><span class="far fa-user"></span></a></button>
-                           </li>
-                           <li>
-                              <button type="button" data-toggle="modal" data-target="#exampleModal"> <span class="far fa-user"></span></button>
-                           </li>
-                        <li class="toyscart toyscart2 cart cart box_1">
-                           <form action="#" method="post" class="last">
-                              <input type="hidden" name="cmd" value="_cart">
-                              <input type="hidden" name="display" value="1">
-                              <button class="top_toys_cart" type="submit" name="submit" value="">
-                              <span class="fas fa-cart-arrow-down"></span>
-                              </button>
-                           </form>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+             
             </div>
          </div>
          <nav class="navbar navbar-expand-lg navbar-light">
@@ -61,17 +38,14 @@
                   <li class="nav-item active">
                      <a href="about.html" class="nav-link">About</a>
                   </li>
-                  <li class="nav-item">
-                     <a href="service.html" class="nav-link">Service</a>
+                  <li class="nav-item ">
+                     <a href="useraccount.html" class="nav-link">Account</a>
                   </li>
                   <li class="nav-item">
-                     <a href="shop.html" class="nav-link">Shop Now</a>
+                     <a href="craftAdd.html" class="nav-link">Add Craft</a>
                   </li>
                   <li class="nav-item">
-                     <a href="addcraft.html" class="nav-link">Add Craft</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="../index.html" class="nav-link" id="logout">Logout</a>
+                     <a  class="nav-link"onclick="logout('token','id','username','firstName','lastName','email','address');">Logout</a>
                   </li>
                </ul>
             </div>
@@ -136,23 +110,20 @@
       </section>
       <!--//about -->
       <!--Customers Review -->
-      <section class="clients py-lg-4 py-md-3 py-sm-3 py-3" id="clients">
+      <section class=" py-lg-4 py-md-3 py-sm-3 py-3" id="clients">
          <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
-            <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Contact US</h3>
+            <h3 class="title1  text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Contact US</h3>
               <div class="contact-list-grid">
-               <form action="#" method="post">
+               <form  id="feedbackForm" method="POST" enctype="multipart/form-data">
                   <div class=" agile-wls-contact-mid">
                      <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" placeholder="Name" id="firstname">
                      </div>
                      <div class="form-group contact-forms">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" placeholder="Email" id="email">
                      </div>
                      <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Phone">
-                     </div>
-                     <div class="form-group contact-forms">
-                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Message" id="feedback"></textarea>
                      </div>
                      <button type="submit" class="btn btn-block sent-butnn">Send</button>
                   </div>
@@ -161,37 +132,7 @@
          </div>
       </section>
       <!--//Customers Review -->
-      <!--subscribe-address-->
-      <!--//subscribe-address-->
-      <section class="sub-below-address py-lg-4 py-md-3 py-sm-3 py-3">
-         <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
-            <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Get In Touch Us</h3>
-            <div class="icons mt-4 text-center">
-               <ul>
-                  <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                  <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                  <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                  <li><a href="#"><span class="fab fa-vk"></span></a></li>
-               </ul>
-               <p class="my-3">velit sagittis vehicula. Duis posuere 
-                  ex in mollis iaculis. Suspendisse tincidunt
-                  velit sagittis vehicula. Duis posuere 
-                  velit sagittis vehicula. Duis posuere 
-               </p>
-            </div>
-            <div class="email-sub-agile">
-               <form action="#" method="post">
-                  <div class="form-group sub-info-mail">
-                     <input type="email" class="form-control email-sub-agile" placeholder="Email">
-                  </div>
-                  <div class="text-center">
-                     <button type="submit" class="btn subscrib-btnn">Subscribe</button>
-                  </div>
-               </form>
-            </div>
-         </div>
-      </section>
-      <!--//subscribe-->
+      
       <!-- footer -->
      <footer class="py-lg-4 py-md-3 py-sm-3 py-3 text-center">
          <div class="copy-agile-right">
@@ -201,47 +142,15 @@
          </div>
       </footer>
       <!-- //footer -->
-      <!-- Modal 1-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div class="register-form">
-                     <form action="#" method="post">
-                        <div class="fields-grid">
-                           <div class="styled-input">
-                              <input type="text" placeholder="Your Name" name="Your Name" required="">
-                           </div>
-                           <div class="styled-input">
-                              <input type="email" placeholder="Your Email" name="Your Email" required="">
-                           </div>
-                           <div class="styled-input">
-                              <input type="password" placeholder="password" name="password" required="">
-                           </div>
-                           <button type="submit" class="btn subscrib-btnn">Login</button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- //Modal 1-->
+     
 
 
       <!--js working-->
       <script src='../../resources/js/jquery-3.4.1.min.js'></script>
       <script src="../../resources/js/bootstrap.js"></script>
-      <script src="../../resources/js/logout.js"></script>
+      <script src="../../resources/js/feedback.js"></script>
+      <script type="text/javascript" src="../../resources/js/tokenVerify.js"></script>
+      <script type="text/javascript" src="../../resources/js/logout.js"></script>
      
    </body>
 </html>

@@ -77,6 +77,11 @@ $(document).ready(
 					window.localStorage.setItem('token', result.token);
 					window.localStorage.setItem('id', result.result.id);
 					window.localStorage.setItem('username', result.result.username);
+					window.localStorage.setItem('firstName', result.result.firstName);
+					window.localStorage.setItem('lastName', result.result.lastName);
+					window.localStorage.setItem('email', result.result.email);
+					window.localStorage.setItem('address', result.result.address);
+
 
 
 					console.log(result.result.usertype)
